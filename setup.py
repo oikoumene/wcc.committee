@@ -34,6 +34,8 @@ setup(name='wcc.committee',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
           'plone.app.versioningbehavior',
+          'wcc.vocabularies',
+          'wcc.churches',
           # -*- Extra requirements: -*-
       ],
       extras_require={
