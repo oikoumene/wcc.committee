@@ -18,24 +18,31 @@
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
 
-    <tal:block repeat="widget view/widgets/values">
-        <div class="field" tal:condition="python:widget.__name__ not in ('IDublinCore.title', 'IDublinCore.description', 'title', 'description',)">
-            <label tal:content="widget/label" />
-            <br />
-            <div tal:content="structure widget/render" />
-        </div>
-    </tal:block>
+  <div class="row">
+      <div class="cell position-1 width-1:2">
+          <span class="wcc-committee-img">
+        <img tal:replace="structure context/@@images/committee_photo/preview | nothing"/>
+        </span>
 
-    <fieldset tal:repeat="group view/groups"
-              tal:attributes="id python:''.join((group.prefix, 'groups.', group.__name__)).replace('.', '-')">
-        <legend tal:content="group/label" />
-        <div class="field" tal:repeat="widget group/widgets/values">
-            <label tal:content="widget/label" />
-            <br />
-            <div tal:content="structure widget/render" />
-        </div>
-    </fieldset>
+      </div>
+      <div class="cell position-7 width-1:2">
+          <ul class="wcc-committee-details">
+              <tal:committee-label tal:repeat="widget view/widgets/values">
+              <tal:except tal:condition="python: widget.__name__ not in ('committee_photo','committee_country',)">
+              <li><span class="wcc-committee-label" tal:content="widget/label"/> : <span tal:content="structure widget/render"/></li>
+              </tal:except>
+              </tal:committee-label>
+              <li tal:define="countries python: view.get_country_info(context.committee_country)">
+                  <tal:block repeat="country countries">
+                  <span class="wcc-committee-label" tal:content="view/w/committee_country/label"/> : <a tal:attributes="href country/getURL" tal:content="country/Title"></a>
+                  </tal:block>
+                
+              </li>
+          </ul>
 
+</div>
+     
+      </div>
 
   </metal:content-core>
 </metal:main>

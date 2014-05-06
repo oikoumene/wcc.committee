@@ -52,8 +52,8 @@ class ICommittee(form.Schema, IImageScaleTraversable):
         required=False
     )
 
-    languageindependent('commmitte_country')
-    commmitte_country = schema.Choice(
+    languageindependent('committee_country')
+    committee_country = schema.Choice(
         title=_(u'Country'),
         vocabulary='wcc.vocabulary.country',
         description=_(u''),
