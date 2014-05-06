@@ -60,10 +60,10 @@ class ICommittee(form.Schema, IImageScaleTraversable):
         required=False,
         )
 
-    languageindependent('commmitte_photo')
+    languageindependent('committee_photo')
     committee_photo = NamedBlobImage(
         title=_(u"Photo"),
-        description=_(u""),
+        description=_(u"Photo size 260x399 for best result"),
         required=False
         )
 
