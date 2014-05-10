@@ -21,14 +21,14 @@
   <div class="row">
       <div class="cell position-1 width-1:2">
           <span class="wcc-committee-img">
-        <img tal:replace="structure context/@@images/committee_photo/preview | nothing"/>
+        <img tal:replace="structure context/@@images/image/preview | nothing"/>
         </span>
 
       </div>
       <div class="cell position-7 width-1:2">
           <ul class="wcc-committee-details">
               <tal:committee-label tal:repeat="widget view/widgets/values">
-              <tal:except tal:condition="python: widget.__name__ not in ('committee_photo','committee_country',)">
+              <tal:except tal:condition="python: widget.__name__ not in ('image','committee_country',)">
               <li><span class="wcc-committee-label" tal:content="widget/label"/> : <span tal:content="structure widget/render"/></li>
               </tal:except>
               </tal:committee-label>
