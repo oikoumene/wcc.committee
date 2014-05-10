@@ -32,6 +32,7 @@ from wcc.committee import MessageFactory as _
 class ICommittee(form.Schema, IImageScaleTraversable):
     """
     """
+    dexteritytextindexer.searchable('title')
     title = schema.TextLine(
         title=_(u"Name"),
         description=_(u"Name of the committee member"),
@@ -45,6 +46,7 @@ class ICommittee(form.Schema, IImageScaleTraversable):
         )
 
     languageindependent("committee_churchmember")
+    dexteritytextindexer.searchable('committee_churchmember')
     committee_churchmember = RelationChoice(
         title=_(u'Church'),
         source=ObjectProvidesPathSourceBinder(
@@ -53,6 +55,7 @@ class ICommittee(form.Schema, IImageScaleTraversable):
     )
 
     languageindependent('committee_country')
+    dexteritytextindexer.searchable('committee_country')
     committee_country = schema.Choice(
         title=_(u'Country'),
         vocabulary='wcc.vocabulary.country',
@@ -60,8 +63,8 @@ class ICommittee(form.Schema, IImageScaleTraversable):
         required=False,
         )
 
-    languageindependent('committee_photo')
-    committee_photo = NamedBlobImage(
+    languageindependent('image')
+    image = NamedBlobImage(
         title=_(u"Photo"),
         description=_(u"Size 290x400 for best result"),
         required=False

@@ -22,4 +22,6 @@
 
     <!-- -*- extra stuff goes here -*- -->
 
+    <adapter name="committee_churchmember" factory=".indexer.committee_churchmember" />
+
 </configure>
