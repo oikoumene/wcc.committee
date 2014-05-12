@@ -60,3 +60,18 @@ ul.wcc-committee-details .wcc-committee-label {
     color: #000;
     border: none;
 }
+
+.committee-listing-title {
+    font-family: Frutiger,Candara,Arial,Helvetica,sans-serif;
+    font-size: 18px;
+}
+
+.committee-listing-churchmember {
+    font-size: 12px;
+    font-weight: bold;
+
+}
+.committee-listing-country {
+    font-size: 12px;
+
+}
