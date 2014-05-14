@@ -77,7 +77,7 @@
                     </td>
                     <td>
                         <ul class="wcc-committee-details">
-                            <li><a class="committee-listing-title" tal:attributes="href item_url" tal:content="item_title_or_id">
+                            <li><a class="committee-listing-title" tal:attributes="href item_url" tal:content="string: ${item/committee_title} ${item_title_or_id}">
                                 </a>
                             </li>
                             <li>

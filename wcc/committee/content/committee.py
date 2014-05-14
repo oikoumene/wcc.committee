@@ -35,7 +35,13 @@ class ICommittee(form.Schema, IImageScaleTraversable):
     dexteritytextindexer.searchable('title')
     title = schema.TextLine(
         title=_(u"Name"),
-        description=_(u"Name of the committee member"),
+        description=_(u"First and last name of the committee member"),
+        required=True
+        )
+
+    committee_title = schema.TextLine(
+        title=_(u"Title"),
+        description=_(u"Title of the committee member"),
         required=True
         )
 

@@ -7,13 +7,11 @@
       i18n:domain="wcc.committee">
 <body>
 
-<tal:comment tal:condition="nothing">
-    This is a sample view template. It will not be used for rendering the
-    content unless activated by creation of a view class with a matching name.
-    
-    Note that we're using Plone 4 macros. Replace them with Plone 3 macros
-    if needed.
-</tal:comment>
+<metal:content-core fill-slot="content-title">
+    <h1 class="documentFirstHeading">
+        <span tal:content="string: ${view/w/committee_title/value} ${view/w/title/value} "/>
+    </h1>
+</metal:content-core>
 
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
@@ -27,8 +25,9 @@
       </div>
       <div class="cell position-7 width-1:2">
           <ul class="wcc-committee-details">
+              <li><span class="wcc-committee-label" tal:content="view/w/title/label"/> : <span tal:content="string: ${view/w/committee_title/value} ${view/w/title/value} "/></li>
               <tal:committee-label tal:repeat="widget view/widgets/values">
-              <tal:except tal:condition="python: widget.__name__ not in ('image','committee_country',)">
+              <tal:except tal:condition="python: widget.__name__ not in ('title', 'committee_title', 'image','committee_country',)">
               <li><span class="wcc-committee-label" tal:content="widget/label"/> : <span tal:content="structure widget/render"/></li>
               </tal:except>
               </tal:committee-label>

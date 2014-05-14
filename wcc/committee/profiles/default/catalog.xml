@@ -8,5 +8,6 @@
         </index>
         <column value="committee_country"/>
         <column value="committee_churchmember"/>
+        <column value="committee_title"/>
 
 </object>
