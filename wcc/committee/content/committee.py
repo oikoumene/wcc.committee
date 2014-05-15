@@ -51,6 +51,12 @@ class ICommittee(form.Schema, IImageScaleTraversable):
         required=False
         )
 
+    committee_executive = schema.Bool(
+        title=_(u"Executive committee"),
+        description=_(u"Check this if person is part of Executive Committee"),
+        required=False
+        )
+
     languageindependent("committee_churchmember")
     dexteritytextindexer.searchable('committee_churchmember')
     committee_churchmember = RelationChoice(

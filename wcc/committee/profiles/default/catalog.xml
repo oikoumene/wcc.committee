@@ -6,6 +6,9 @@
         <index name="committee_country" meta_type="FieldIndex">
               <indexed_attr value="committee_country"/>
         </index>
+        <index name="committee_executive" meta_type="FieldIndex">
+              <indexed_attr value="committee_executive"/>
+        </index>
         <column value="committee_country"/>
         <column value="committee_churchmember"/>
         <column value="committee_title"/>
