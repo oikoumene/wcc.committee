@@ -69,9 +69,11 @@ ul.wcc-committee-details .wcc-committee-label {
 .committee-listing-churchmember {
     font-size: 12px;
     font-weight: bold;
-
 }
 .committee-listing-country {
     font-size: 12px;
+}
 
+.faceted-criteria-committee dt{
+   display:none 
 }

@@ -25,15 +25,15 @@
       </div>
       <div class="cell position-7 width-1:2">
           <ul class="wcc-committee-details">
-              <li><span class="wcc-committee-label" tal:content="view/w/title/label"/> : <span tal:content="string: ${view/w/committee_title/value} ${view/w/title/value} "/></li>
+              <li><span class="wcc-committee-label" tal:content="view/w/title/label"/>: <span tal:content="string: ${view/w/committee_title/value} ${view/w/title/value} "/></li>
               <tal:committee-label tal:repeat="widget view/widgets/values">
               <tal:except tal:condition="python: widget.__name__ not in ('committee_executive', 'title', 'committee_title', 'image','committee_country',)">
-              <li><span class="wcc-committee-label" tal:content="widget/label"/> : <span tal:content="structure widget/render"/></li>
+              <li><span class="wcc-committee-label" tal:content="widget/label"/>: <span tal:content="structure widget/render"/></li>
               </tal:except>
               </tal:committee-label>
               <li tal:define="countries python: view.get_country_info(context.committee_country)">
                   <tal:block repeat="country countries">
-                  <span class="wcc-committee-label" tal:content="view/w/committee_country/label"/> : <a tal:attributes="href country/getURL" tal:content="country/Title"></a>
+                  <span class="wcc-committee-label" tal:content="view/w/committee_country/label"/>: <a tal:attributes="href country/getURL" tal:content="country/Title"></a>
                   </tal:block>
                 
               </li>
