@@ -45,7 +45,7 @@ class ICommittee(form.Schema, IImageScaleTraversable):
         required=True
         )
 
-    description = schema.Text(
+    description = RichText(
         title=_(u"Description"),
         description=_(u"Description of the committee member"),
         required=False
