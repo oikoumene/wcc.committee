@@ -5,4 +5,20 @@
 
   <faceted:widget factory=".widget.Widget" />
 
+  <browser:resource
+    name="wcc.committee.eeawidget.view.js"
+    file="./view.js"
+   />
+
+  <browser:resource
+    name="wcc.committee.eeawidget.view.css"
+    file="./view.css"
+   />
+
+  <browser:resource
+    name="wcc.committee.eeawidget.edit.css"
+    file="./edit.css"
+   />
+
+
 </configure>

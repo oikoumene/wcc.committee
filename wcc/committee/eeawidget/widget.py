@@ -24,12 +24,12 @@ class Widget(AbstractWidget):
     """ Widget
     """
     # Widget properties
-    widget_type = 'criteria'
+    widget_type = 'wcc_committe_filter'
     widget_label = _('Committee Filters')
-    view_js = '++resource++eea.facetednavigation.widgets.criteria.view.js'
-    view_css = '++resource++eea.facetednavigation.widgets.criteria.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.criteria.edit.css'
-    css_class = 'faceted-criteria-widget'
+    view_js = '++resource++wcc.committee.eeawidget.view.js'
+    view_css = '++resource++wcc.committee.eeawidget.view.css'
+    edit_css = '++resource++wcc.committee.eeawidget.edit.css'
+    css_class = 'faceted-committee-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
