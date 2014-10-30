@@ -29,7 +29,7 @@ class Widget(AbstractWidget):
     view_js = '++resource++wcc.committee.eeawidget.view.js'
     view_css = '++resource++wcc.committee.eeawidget.view.css'
     edit_css = '++resource++wcc.committee.eeawidget.edit.css'
-    css_class = 'faceted-committee-widget'
+    css_class = 'faceted-criteria-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
