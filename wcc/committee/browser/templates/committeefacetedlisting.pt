@@ -89,7 +89,7 @@
                                         <tal:block tal:repeat="country countries">
                                             <span class="committee-listing-country" tal:content="country/Title"/>
                                         </tal:block>
-                                    </tal:entrytal:e>
+                                    </tal:entry>
                                 </tal:if>
                             </li>
                     </ul>
