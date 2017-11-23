@@ -83,11 +83,15 @@
                             <li>
                                 <span class="committee-listing-churchmember" tal:content="item/committee_churchmember"/>
                             </li>
-                        <li tal:define="countries python:committeeview.get_country_info(item.committee_country)">
-                            <tal:block tal:repeat="country countries">
-                                <span class="committee-listing-country" tal:content="country/Title"/>
-                            </tal:block>
-                        </li>
+                            <li>
+                                <tal:if tal:condition="python: item_type == 'wcc.committee.committee'">
+                                    <tal:entry tal:define="countries python:committeeview.get_country_info(item.committee_country)">
+                                        <tal:block tal:repeat="country countries">
+                                            <span class="committee-listing-country" tal:content="country/Title"/>
+                                        </tal:block>
+                                    </tal:entrytal:e>
+                                </tal:if>
+                            </li>
                     </ul>
 
                     </td>
