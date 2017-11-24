@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.7 (unreleased)
+1.6.1 (2017-11-24)
 ----------------
 
-- Nothing changed yet.
+- fixed bug on committeefacetedlisting template when contents are not of committee contenttype
 
 
 1.6 (2014-11-05)
